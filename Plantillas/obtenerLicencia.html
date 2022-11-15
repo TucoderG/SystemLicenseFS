@@ -1,0 +1,64 @@
+{% extends "paginaBase.html" %} 
+
+
+{% block title %} Sección de usuario {% endblock %}
+
+
+{% block content %}
+
+    {% if mensaje %}
+
+        <p style="background-color: #efd068; margin-left: 26%; margin-right: 26%;">{{mensaje}}</p>
+
+    {% endif %}
+
+    {% if turno %}
+
+        <p style="background-color: #efd068; margin-left: 25%; margin-right: 25%;">Se le ha generado un turno para {{turno.nombreTurno}} el dia {{turno.fechaTurno}}.</p>
+
+    {% endif %}
+
+    {% if clave %}
+
+        <p style="background-color: #efd068; margin-left: 26%; margin-right: 26%;">Su clave para rendir el examen es: {{clave.clave}}, el tiempo limite para acceder a su examen es: {{clave.tiempoLimite}}</p>
+
+    {% endif %}
+
+    <form action="registrarDatos" method="POST">{% csrf_token %}
+        <legend style="text-align: center; color: #f8efda;">Ingrese sus datos</legend>
+            <div style="display: flex; flex-direction: column; text-align: center; margin-left: 25%; margin-right: 25%;">
+
+                <label for="Dni:" style="gap: 5px; color: #f8efda; padding: 5px; text-align: left;">DNI:</label>
+                <input type="text" style="padding: 5px; border-radius: 6px;" placeholder="XXXXXXXX" name="dniUsuarioI">
+
+                <label for="NombreUsuario:" style="gap: 5px; color: #f8efda; padding: 5px; text-align: left;">Nombre:</label>
+                <input type="text" style="padding: 5px; border-radius: 6px;" placeholder="Nombre de usuario de su cuenta" name="nombreUsuarioI">
+
+                <label for="ApellidoUsuario:" style="gap: 5px; color: #f8efda; padding: 5px; text-align: left;">Apellido:</label>
+                <input type="text" style="padding: 5px; border-radius: 6px;" placeholder="Apellido" name="apellidoUsuarioI">
+                
+                <label for="EdadUsuario:" style="gap: 5px; color: #f8efda; padding: 5px; text-align: left;">Edad:</label>
+                <input type="number" style="padding: 5px; border-radius: 6px;" placeholder="XX" name="edadUsuarioI">
+
+                <label for="DireccionUsuario:" style="gap: 5px; color: #f8efda; padding: 5px; text-align: left;">Dirección:</label>
+                <input type="text" style="padding: 5px; border-radius: 6px;" placeholder="Calle falsa 123" name="direccionUsuarioI">
+
+                <label for="Email:" style="gap: 5px; color: #f8efda; padding: 5px; text-align: left;">Email:</label>
+                <input type="email" style="padding: 5px; border-radius: 6px;" placeholder="unejemplo@email.com" name="emailUsuarioI">
+                
+                <label for="TelefonoUsuario:" style="gap: 5px; color: #f8efda; padding: 5px; text-align: left;">Telefono:</label>
+                <input type="text" style="padding: 5px; border-radius: 6px;" placeholder="+XX X XXXX XXXXXX" name="telefonoUsuarioI">
+
+                <label for="anteojosI:" style="gap: 5px; color: #f8efda; padding: 5px; text-align: left;">Utiliza anteojos?:</label>
+                <input type="text" style="padding: 5px; border-radius: 6px;" placeholder="si/no" name="anteojosI">
+            
+                <input type="submit" style="border-radius: 20cm; background-color: #e76c42; color: #f8efda; padding: 5px 5px; margin-left: 35%; margin-right: 35%; margin-top: 10px; border-color: #f8efda;" value="Continuar">
+            </div>
+        </fieldset>
+        
+
+    
+        
+    </form>
+
+{% endblock %}

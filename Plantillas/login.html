@@ -1,0 +1,21 @@
+{% extends "paginaBase.html" %} 
+
+
+{% block title %} Sección de usuario {% endblock %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+    <form action="" method="POST" style="text-align: center; margin-top: 2%;">{% csrf_token %}
+
+        {{ form|crispy }}
+    
+        <input type="submit" style="text-align: left;border-color: #f8efda; border-radius: 7px; background-color: #e76c42; color: #f8efda; padding: 5px 5px; margin-top: 20px;" value= "Iniciar Sesion">
+        <p style="text-align: center; padding-bottom: 5px; padding-left: 5px; ">Si no tiene una, <a href="registro" style="color: #f8efda ;">haga click aquí</a> </p>
+
+
+    </form>
+
+
+{% endblock %}

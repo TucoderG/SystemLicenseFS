@@ -1,0 +1,33 @@
+{% extends "paginaBase.html" %} 
+
+
+{% block title %} Sección de usuario {% endblock %}
+
+
+{% block content %}
+
+    {% if user.is_authenticated %}
+        <h1 style="text-align: left; padding-bottom: 5px; padding-left: 5px;">Bienvenido {{user.username}}</h1>
+        <h2 style="text-align: center; padding-bottom: 5px; padding-left: 5px;">Obtenga su licencia ya mismo!</h2>
+    
+        <div style="display: flex; align-items: center; justify-content: space-between; padding-left: 20%; padding-right: 20%; padding-top: 9px;">
+
+            <form action="obtenerLicencia" method="GET">
+                <input type="submit"  style="border-radius: 15cm; background-color: #e76c42; color: #f8efda; padding: 8px 8px; border-color: #f8efda;" value="Completar Datos">
+            </form>
+
+            <form action="examen" method="GET">
+                <input type="submit"  style="border-radius: 15cm; background-color: #e76c42; color: #f8efda; padding: 8px 8px; border-color: #f8efda;" value="Rendir Examen">
+            </form>
+
+            <form action="generarClave" method="GET">
+                <input type="submit"  style="border-radius: 15cm; background-color: #e76c42; color: #f8efda; padding: 8px 8px; border-color: #f8efda;" value="Generar nueva clave">
+            </form>
+        </div>
+    
+    {% else %}
+
+        <h1 style="text-align: center; padding-bottom: 5px; padding-left: 5px; margin-top: 103px;">Debe iniciar sesion para acceder al perfil.</h1>
+        
+    {% endif %}
+{% endblock %}

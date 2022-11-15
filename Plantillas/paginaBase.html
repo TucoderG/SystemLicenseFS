@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title %}
+
+        {% endblock %}
+    </title>
+    <script src="https://kit.fontawesome.com/89f0e7cc79.js" crossorigin="anonymous"></script>
+</head>
+<body style="background-color:#efd068; color: #f8efda; margin: 0; padding: 0;">
+ 
+    
+
+    <div>
+        <header style="background-color:#122f3f; padding: 13px;">
+                
+            <nav style="display: flex; align-items: center;justify-content: space-between;">
+                <div style="text-align: left;">
+                    <h2 style="font-family: Arial, Helvetica, sans-serif; margin-left: 12px;">TRAMITE NACIONAL </h2>
+                </div>
+                <div style="text-align: right;">
+                    <a href="inicio" style="padding: 15px 20px 15px 20px; background-color: #e76c42; text-decoration: none; color:#f8efda; border-radius: 13px;box-shadow: 0 0 0 1px; margin-right: 6px;">Inicio</a>
+                    <a href="login"style="padding: 15px; background-color:  #e76c42; text-decoration: none; color: #f8efda; border-radius: 13px;box-shadow: 0 0 0 1px; margin-right: 6px;">Ingreso</a>
+                    <a href="perfil"style="padding: 15px 20px 15px 20px; background-color:  #e76c42; text-decoration: none; color: #f8efda; border-radius: 13px;box-shadow: 0 0 0 1px; margin-right: 3px;">Perfil</a>
+                </div>
+            </nav>
+        </header>
+    </div>
+        
+    <div style="margin-left: 10px; margin-right: 10px; background-color: #17659c; padding: 1px; border-radius: 20px;">
+            
+        <div style="justify-content: center; text-align: center; padding-bottom: 10%; padding-top: 5px;">
+            
+            {% block content %}
+
+            {% endblock %}
+        </div>
+            
+            
+            
+    </div>
+
+
+    <div style="text-align: center;">
+        <footer>
+            <p style="background-color: #122f3f; margin-left: 40%; margin-right: 40%;margin-top: 10%; border-radius: 20px; padding: 5px;">Tu licencia, Nuestra seguridad</p>
+        </footer>
+    </div>
+
+   
+
+</body>
+</html>

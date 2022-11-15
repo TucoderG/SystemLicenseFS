@@ -1,0 +1,23 @@
+{% extends "paginaBase.html" %} 
+
+
+{% block title %} Licencia de Conducir Nacional {% endblock %}
+
+
+{% block content %}
+
+    {% if puntaje %}
+        <h2 style="margin-top: 8.8%;">Su calificacion fue: {{puntaje}}</h2>
+        {% if puntaje >= 8 %}
+            <h3>Felicidades, aprobaste el examen!</h3>
+        {% else %}
+            <h3>Reporbaste el examen, Podras volver a intentarlo no mas de 3 veces.</h3>
+        {% endif%}
+    {% endif %}
+
+    {% if mensaje %}
+        <h2 style="margin-top: 10.4%;">{{mensaje}}. Su calificacion habia sido: {{punt}}</h2>
+    {% endif %}
+    
+  
+{% endblock %}

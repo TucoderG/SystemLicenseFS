@@ -1,0 +1,52 @@
+{% extends "paginaBase.html" %} 
+
+
+{% block title %} Licencia de Conducir Nacional {% endblock %}
+
+
+{% block content %}
+
+    {% if user.is_authenticated %}
+        <nav style="display: flex; align-items: center;justify-content: space-between; ">
+            <div style="text-align: left;">
+                <h3 style="color: white; margin-left: 15px; margin-top: 8px; ">Bienvenido/a  {{user.username}} </h3>
+            </div>
+            <div style="text-align: right;">
+                <a href="cerrarSesion" style="padding: 6px;text-decoration: none; margin-right: 15px; margin-top: 8px;color: white;border-radius: 13px; background-color: #e76c42;box-shadow: 0 0 0 1px;"> Cerrar Sesion</a>
+                
+            </div>
+        </nav>
+    {% else %}
+        <div style="display: flex; align-items: center;justify-content: space-between; ">
+            <h2 style="text-align: left; padding-bottom: 5px; padding-left: 5px;">Bienvenido/a..</h2>
+            <p style="align-items: left; margin-right: 10px;">Inicie sesion</p>
+            
+        </div>
+    {% endif %}
+    
+    <div style="padding: 5px; display: flex; justify-content: center;">
+        <div style="width: 77%;border-style: solid ;box-shadow: 0 0 0 0.1%;">
+            
+            <h3 style="text-align: center; font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; box-shadow: 0 1px 0 0 ; margin-left: 32%; margin-right: 32%;">Pagina oficial de transito Argentina</h3>
+            <p style="text-align: left; padding-left: 5px;">Obtenga su licencia ya mismo!</p>
+            <p style="text-align: left; padding-left: 5px; margin-right: 25%;"> Para obtenerla solo deberá rellenar el formulario con sus datos que se encuentra en la seccion de su perfil y luego rendir el examen teorico.</p>
+        </div>
+
+
+        <div style="width: 15%;border-style: solid ;box-shadow: 0 0 0 0.1%;; margin-left: 1%; padding-bottom: 17px;">
+            <h3 style="text-align: center;">Links..</h3>
+            <nav style=" text-align: center;display: flex; flex-direction: column;">
+
+                <a href="https://www.argentina.gob.ar/sites/default/files/ansv_licencias_libro_senales_de_transito.pdf" style="color: white;"> Señales de transito</a>
+                <i class="fa-solid fa-traffic-light" style="margin-top: 10px; text-align: right; margin-right: 25%;" ></i>
+                <a href="https://www.buenosaires.gob.ar/licenciasdeconducir/curso-de-educacion-vial-para-otorgamiento-de-licencia/material-de-estudio-para" style="color: white; padding-top: 8px;"> Teoria para Examen</a>
+                <i class="fa-solid fa-book-open" style="margin-top: 10px; text-align: center;"></i>
+                <a href="https://www.buenosaires.gob.ar/licenciasdeconducir/consulta-de-infracciones" style="color: white; padding-top: 8px;">Consultar infracciones</a>
+                <i class="fa-solid fa-person-military-pointing" style="margin-top: 10px; text-align: left; margin-left: 25%;"></i>
+            
+            </nav>
+        </div>
+        
+    </div>
+  
+{% endblock %}
