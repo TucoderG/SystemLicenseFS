@@ -9,7 +9,6 @@ Levantar un servidor local:
 Debemos estar dentro de la carpeta principal e introducir el comando "python manage.py runserver",
 luego dirigirse a la direccion local que se nos dará al ejecutar el comando.
 
-Una vez en dicha dirección deberemos agregar "/inicio" para empezar con el uso de la aplicacion web.
 
 Test unitario:
 Debemos estar dentro de la carpeta principal e introducir "python manage.py test" para correr el archivo "/sistemaLicencia/tests.py"
