@@ -104,7 +104,7 @@ def registrarDatos(request):
         # Si la persona necesita anteojos se le asigna un turno para el medico entre las fechas 01/11/2022 y 30/01/2023
         if ant == True:
             maxid = models.Turno.objects.count()
-            inicio = datetime.datetime(2022, 11, 1)
+            inicio = datetime.datetime(2022, 12, 1)
             final =  datetime.datetime(2023, 1, 30)
             turno_random = inicio + (final - inicio) * random.random()
             try:

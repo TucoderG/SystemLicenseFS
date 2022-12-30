@@ -20,7 +20,7 @@ from sistemaLicencia.views import *
 urlpatterns = [
 
     path('admin/', admin.site.urls),
-    path('inicio', inicio, name= "inicio"),
+    path('', inicio, name= "inicio"),
     path('perfil', perfil, name="perfil"),
     path('registro', registro.as_view(), name= "registro"),
     path('cerrarSesion', cerrarSesion, name= "cerrarSesion"),
